@@ -1,9 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  BarChart as BarChartIcon,
-  Visibility,
-  VisibilityOff,
-} from "@mui/icons-material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
   Alert,
   Box,
@@ -130,20 +126,15 @@ const LoginPage = () => {
         {/* ── Logo ──────────────────────────────────────────────────── */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 1 }}>
           <Box
+            component="img"
+            src="/assets/claro.svg"
+            alt="Claro"
             sx={{
-              width: 40,
               height: 40,
-              borderRadius: 2,
-              background: (t) =>
-                `linear-gradient(135deg, ${t.palette.primary.main} 0%, ${t.palette.primary.dark} 100%)`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              width: "auto",
               flexShrink: 0,
             }}
-          >
-            <BarChartIcon sx={{ color: "#fff", fontSize: 22 }} />
-          </Box>
+          />
           <Box>
             <Typography
               variant="h6"
